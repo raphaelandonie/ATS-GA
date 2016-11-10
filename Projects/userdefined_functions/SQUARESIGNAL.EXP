@@ -1,0 +1,27 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+FUNCTION SquareSignal : REAL
+VAR_INPUT
+	t	:	REAL;		(*Input Time*)
+	mini:	REAL;		(*Minimum Value*)
+	maxi:	REAL;		(*Maximum Value*)
+END_VAR
+VAR
+	w		:	REAL := 1; 	(*Frequency*)
+	offs	:	REAL := 0;	(*Offset*)
+	curr_sin:	REAL ;		(*Current Sine Wave*)
+END_VAR
+(* @END_DECLARATION := '0' *)
+(*Generate Square-Wave*)
+
+curr_sin := SIN(w*t);
+
+IF curr_sin > 0 THEN
+	SquareSignal := maxi + offs;
+ELSE
+	SquareSignal := mini + offs;
+END_IF
+END_FUNCTION

@@ -1,0 +1,115 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+FUNCTION_BLOCK DoubleEdgeDetector
+VAR_INPUT
+	(*Input Signal*)
+	sig_in 		: BOOL ;
+	(*Timer Count*)
+	t			: REAL ;
+	(*Idle Time*)
+	Ti			: REAL  ;
+END_VAR
+VAR_OUTPUT
+	fall		: BOOL ;
+	falls		: BOOL ;	
+	rise		: BOOL ;
+	rises		: BOOL ;
+	(*Timer Commands*)
+	timer_ON	: BOOL ;
+END_VAR
+VAR
+	c_state		: T_STATE := STATE_IDLE;
+	prev_sig	: BOOL := FALSE;
+	edgeRise	: BOOL := FALSE;
+	edgeFall	: BOOL := FALSE;
+	TOF			: BOOL := FALSE;
+END_VAR
+(* @END_DECLARATION := '0' *)
+(*Reset Outputs*)
+DoubleEdgeDetector.fall		:= FALSE ;
+DoubleEdgeDetector.falls		:= FALSE ;
+DoubleEdgeDetector.rise		:= FALSE ;
+DoubleEdgeDetector.rises		:= FALSE ;
+
+(*Check Timer Overflow*)
+IF (t > Ti) THEN
+	TOF := TRUE;
+ELSE
+	TOF := FALSE;
+END_IF
+
+(*Check Edge*)
+IF (prev_sig = sig_in) THEN
+	(*Reset Edge*)
+	edgeFall := FALSE;
+	edgeRise := FALSE;
+ELSIF (prev_sig = TRUE) AND (sig_in = FALSE) THEN
+	(*Falling Edge*)
+	edgeFall := TRUE;
+	edgeRise := FALSE;
+ELSIF (prev_sig = FALSE) AND (sig_in = TRUE) THEN
+	(*Rising Edge*)
+	edgeFall := FALSE;
+	edgeRise := TRUE;
+END_IF
+
+(*Set current Signal = previous Signal*)
+prev_sig := sig_in;
+
+(*Final State Machine Implementation*)
+CASE c_state OF
+	STATE_IDLE:
+		(**)
+		IF edgeRise = TRUE THEN
+			c_state := STATE_RISE1;
+		ELSIF edgeFall = TRUE THEN
+			c_state := STATE_FALL1;
+		ELSE
+			c_state := STATE_IDLE;
+		END_IF
+
+	STATE_RISE1:
+		(*Start Timer*)
+		DoubleEdgeDetector.timer_ON := TRUE;
+		(**)
+		IF TOF = TRUE THEN
+			DoubleEdgeDetector.timer_ON := FALSE;
+			DoubleEdgeDetector.rise 	:= TRUE;
+			c_state := STATE_IDLE;
+		ELSIF edgeRise THEN
+			c_state := STATE_RISE2;
+		ELSE
+			c_state := STATE_RISE1;
+		END_IF
+
+	STATE_RISE2:
+		(**)
+		DoubleEdgeDetector.rises 	:= TRUE;
+		c_state := STATE_IDLE;
+		
+	STATE_FALL1:
+		(*Start Timer*)
+		DoubleEdgeDetector.timer_ON := TRUE;
+		(**)
+		IF TOF = TRUE THEN
+			DoubleEdgeDetector.timer_ON := FALSE;
+			DoubleEdgeDetector.fall 	:= TRUE;
+			c_state := STATE_IDLE;
+		ELSIF edgeFall THEN
+			c_state := STATE_FALL2;
+		ELSE
+			c_state := STATE_FALL1;
+		END_IF
+
+	STATE_FALL2:
+		(**)
+		DoubleEdgeDetector.falls 	:= TRUE;
+		c_state := STATE_IDLE;
+
+	ELSE
+		c_state := STATE_IDLE;
+END_CASE;
+END_FUNCTION_BLOCK

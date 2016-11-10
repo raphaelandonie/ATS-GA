@@ -1,0 +1,13 @@
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+TYPE T_STATE :
+(
+	STATE_IDLE := 0,
+	STATE_RISE1:= 1,
+	STATE_RISE2:= 2,
+	STATE_FALL1:= 3,
+	STATE_FALL2:= 4
+);
+END_TYPE
+(* @END_DECLARATION := '0' *)

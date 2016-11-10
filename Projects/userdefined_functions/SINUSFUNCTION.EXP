@@ -1,0 +1,18 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+FUNCTION SinusFunction : REAL
+VAR_INPUT
+	t	:	REAL;		(*Input Time*)
+END_VAR
+VAR
+	w	:	REAL := 1; 	(*Frequency*)
+	A	:	REAL := 1;	(*Amplitude*)
+	offs:	REAL := 0;	(*Offset*)
+END_VAR
+(* @END_DECLARATION := '0' *)
+(*Generate Sine-Wave*)
+SinusFunction := A*SIN(w*t) + offs;
+END_FUNCTION

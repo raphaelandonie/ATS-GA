@@ -1,0 +1,38 @@
+
+(* @NESTEDCOMMENTS := 'Yes' *)
+(* @PATH := '' *)
+(* @OBJECTFLAGS := '0, 8' *)
+(* @SYMFILEFLAGS := '2048' *)
+FUNCTION PWMSignal : REAL
+VAR_INPUT
+	t	:	REAL;		(*Input Time*)
+	dc	:	REAL;		(*Input Duty Cicle*)
+	per	:	REAL;		(*Input Period*)
+END_VAR
+VAR
+	pi		:	REAL := 3.14159;
+	w		:	REAL ;	(*Frequency*)
+	th		:	REAL ;
+	curr_sin:	REAL ;	(*Current Sine Wave*)
+END_VAR
+(* @END_DECLARATION := '0' *)
+(*Generate PWM*)
+
+(*Calculate Frequency using Period*)
+w := (2*pi)/(per);
+(*Generate Reference Wave*)
+curr_sin := 0.5*SIN(w*t)+0.5;
+(*Calculate Threshold*)
+th := 1-((dc)/(100));
+(*Check validity of Input Duty Call*)
+IF (dc <= 0) OR (dc > 100) THEN
+	PWMSignal := 0;
+ELSE
+(*Compare Reference Wave to Threshold*)
+IF curr_sin > th THEN
+	PWMSignal := 1;
+ELSE
+	PWMSignal := 0;
+END_IF
+END_IF
+END_FUNCTION
