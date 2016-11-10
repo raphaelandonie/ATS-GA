@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\Projects\Lab_4\lab_4.pro</Path>
+		<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lab_4.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2016-11-03T20:27:46</ChangeDate>
+		<ChangeDate>2016-11-10T18:53:37</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -15,9 +15,6 @@
 		<AdsInfo>
 			<NetId>5.12.140.106.1.1</NetId>
 			<Port>801</Port>
-			<TargetName>
-				<![CDATA[Target: Local (192.168.56.1.1.1), Laufzeit: 1]]>
-			</TargetName>
 		</AdsInfo>
 	</RoutingInfo>
 	<CompilerInfo>
@@ -62,7 +59,7 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="30000234" Crc32="1021124809" LastChange="2016-11-03T20:27:46">T_STATE</Name>
+			<Name Decoration="30000234" Crc32="1021124809" LastChange="2016-11-10T18:53:36">T_STATE</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -87,7 +84,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10060E65" Crc32="3277122502" LastChange="2016-11-03T20:27:46">Integrator</Name>
+			<Name Decoration="10060E65" Crc32="3277122502" LastChange="2016-11-10T18:53:36">Integrator</Name>
 			<BitSize>192</BitSize>
 			<SubItem>
 				<Name>u_k_1</Name>
@@ -131,7 +128,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100810CB" Crc32="4247433737" LastChange="2016-11-03T20:27:46">LowpassFilter</Name>
+			<Name Decoration="100810CB" Crc32="1408442790" LastChange="2016-11-10T18:53:36">LowpassFilter</Name>
 			<BitSize>256</BitSize>
 			<SubItem>
 				<Name>y_k_1</Name>
@@ -736,7 +733,7 @@
 	</DataTypes>
 	<Functions>
 		<Function>
-			<Name Decoration="100811BB" Crc32="1813227155" LastChange="2016-11-03T20:27:46">PWMSignal</Name>
+			<Name Decoration="100811BB" Crc32="1813227155" LastChange="2016-11-10T18:53:36">PWMSignal</Name>
 			<FunInfo>
 				<CodeIndex>57</CodeIndex>
 				<ReturnValue>
@@ -797,9 +794,9 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10050BD0" Crc32="3123392783" LastChange="2016-11-03T20:27:46">SinusFunction</Name>
+			<Name Decoration="10050BD0" Crc32="3123392783" LastChange="2016-11-10T18:53:36">SinusFunction</Name>
 			<FunInfo>
-				<CodeIndex>58</CodeIndex>
+				<CodeIndex>60</CodeIndex>
 				<ReturnValue>
 					<Name>SinusFunction</Name>
 					<Type>REAL</Type>
@@ -840,7 +837,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10071250" Crc32="1780414968" LastChange="2016-11-03T20:27:46">SquareSignal</Name>
+			<Name Decoration="10071250" Crc32="1780414968" LastChange="2016-11-10T18:53:36">SquareSignal</Name>
 			<FunInfo>
 				<CodeIndex>56</CodeIndex>
 				<ReturnValue>
@@ -1110,7 +1107,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10086048" Crc32="1038277507" LastChange="2016-11-03T20:27:46">MAIN</Name>
+			<Name Decoration="10086048" Crc32="0583544251" LastChange="2016-11-10T18:53:36">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>53</CodeIndex>
 				<Symbol>
