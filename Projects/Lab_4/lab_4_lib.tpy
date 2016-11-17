@@ -4,11 +4,10 @@
 	<ProjectInfo>
 		<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lab_4_lib.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2016-11-17T18:51:55</ChangeDate>
+		<ChangeDate>2016-11-17T20:25:52</ChangeDate>
 		<Library>
 			<Name>lib_lab_4.lib</Name>
 			<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib</Path>
-			<ChangeDate>2016-11-10T20:50:30</ChangeDate>
 		</Library>
 		<Library>
 			<Name>STANDARD.LIB</Name>
@@ -189,8 +188,8 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100B15F6" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">SecondOrderLag</Name>
-			<BitSize>352</BitSize>
+			<Name Decoration="100C1758" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">SecondOrderLag</Name>
+			<BitSize>384</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k_1</Name>
 				<Type>REAL</Type>
@@ -237,28 +236,34 @@
 				<BitOffs>192</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">d</Name>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">g</Name>
 				<Type>REAL</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>224</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">w0</Name>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">d</Name>
 				<Type>REAL</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>256</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">x_k</Name>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">w0</Name>
 				<Type>REAL</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>288</BitOffs>
 			</SubItem>
 			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k</Name>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">x_k</Name>
 				<Type>REAL</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>352</BitOffs>
 			</SubItem>
 			<FbInfo>
 				<CodeIndex>24</CodeIndex>
@@ -1189,7 +1194,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="100DD235" Crc32="1754548987" LastChange="2016-11-17T18:51:55">MAIN</Name>
+			<Name Decoration="100DD65A" Crc32="2897495039" LastChange="2016-11-17T20:25:52">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>60</CodeIndex>
 				<Symbol>
@@ -1300,24 +1305,24 @@
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.SOL010</Name>
-			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<Type Decoration="100C1758">SecondOrderLag</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>320</IOffset>
-			<BitSize>352</BitSize>
+			<IOffset>456</IOffset>
+			<BitSize>384</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.SOL001</Name>
-			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<Type Decoration="100C1758">SecondOrderLag</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>364</IOffset>
-			<BitSize>352</BitSize>
+			<IOffset>504</IOffset>
+			<BitSize>384</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.SOL100</Name>
-			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<Type Decoration="100C1758">SecondOrderLag</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>408</IOffset>
-			<BitSize>352</BitSize>
+			<IOffset>552</IOffset>
+			<BitSize>384</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.wr</Name>
