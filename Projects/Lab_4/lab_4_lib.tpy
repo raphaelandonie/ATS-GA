@@ -4,10 +4,11 @@
 	<ProjectInfo>
 		<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lab_4_lib.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2016-11-10T20:58:13</ChangeDate>
+		<ChangeDate>2016-11-17T18:51:55</ChangeDate>
 		<Library>
 			<Name>lib_lab_4.lib</Name>
 			<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib</Path>
+			<ChangeDate>2016-11-10T20:50:30</ChangeDate>
 		</Library>
 		<Library>
 			<Name>STANDARD.LIB</Name>
@@ -185,6 +186,83 @@
 			<FbInfo>
 				<CodeIndex>21</CodeIndex>
 				<InitIndex>22</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100B15F6" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">SecondOrderLag</Name>
+			<BitSize>352</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k_1</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k_2</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">T</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">T_leave</Name>
+				<Type>REAL</Type>
+				<Comment>
+					<![CDATA[Coefficients]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">a</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">b</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">c</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">d</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">w0</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">x_k</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib">y_k</Name>
+				<Type>REAL</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>24</CodeIndex>
+				<InitIndex>25</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1111,7 +1189,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="1006DA05" Crc32="3981602897" LastChange="2016-11-10T20:58:13">MAIN</Name>
+			<Name Decoration="100DD235" Crc32="1754548987" LastChange="2016-11-17T18:51:55">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>60</CodeIndex>
 				<Symbol>
@@ -1131,6 +1209,27 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.LP100</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.LP010SQ</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.LP001SQ</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.LP100SQ</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.SOL010</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.SOL001</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.SOL100</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.wr</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
@@ -1177,6 +1276,55 @@
 			<IGroup>16448</IGroup>
 			<IOffset>192</IOffset>
 			<BitSize>256</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.LP010SQ</Name>
+			<Type Decoration="100810CB">LowpassFilter</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>224</IOffset>
+			<BitSize>256</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.LP001SQ</Name>
+			<Type Decoration="100810CB">LowpassFilter</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>256</IOffset>
+			<BitSize>256</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.LP100SQ</Name>
+			<Type Decoration="100810CB">LowpassFilter</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>288</IOffset>
+			<BitSize>256</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.SOL010</Name>
+			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>320</IOffset>
+			<BitSize>352</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.SOL001</Name>
+			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>364</IOffset>
+			<BitSize>352</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.SOL100</Name>
+			<Type Decoration="100B15F6">SecondOrderLag</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>408</IOffset>
+			<BitSize>352</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.wr</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>452</IOffset>
+			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name IsDefinedInLibrary="1" TaskPrio="1">.t_global</Name>
