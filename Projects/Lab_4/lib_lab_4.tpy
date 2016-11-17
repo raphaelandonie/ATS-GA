@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\Raphael\Documents\HSLU\05_HS_16\ATS\sharedFolder\Projects\Lab_4\lib_lab_4.lib</Path>
+		<Path>Y:\ATS-GA\Projects\Lab_4\lib_lab_4.lib</Path>
 		<IsLibrary>true</IsLibrary>
-		<ChangeDate>2016-11-10T20:50:30</ChangeDate>
+		<ChangeDate>2016-11-17T19:19:18</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -16,7 +16,7 @@
 			<NetId>0.0.0.0.0.0</NetId>
 			<Port>801</Port>
 			<TargetName>
-				<![CDATA[Target: Local (192.168.56.1.1.1), Laufzeit: 1]]>
+				<![CDATA[Target: Local (10.0.2.15.1.1), Run Time: 1]]>
 			</TargetName>
 		</AdsInfo>
 	</RoutingInfo>
@@ -26,7 +26,7 @@
 		<Alignment>Byte</Alignment>
 		<PackSize>1</PackSize>
 		<TwinCATVersion>2.11.0</TwinCATVersion>
-		<TCatPlcCtrlVersion>2.11.2230</TCatPlcCtrlVersion>
+		<TCatPlcCtrlVersion>2.11.2224</TCatPlcCtrlVersion>
 	</CompilerInfo>
 	<TargetInfo>
 		<CpuFamily>x86</CpuFamily>
@@ -272,7 +272,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100B15F6" Crc32="1034763667" LastChange="2016-11-10T20:50:29">SecondOrderLag</Name>
+			<Name Decoration="100B15F6" Crc32="2894816965" LastChange="2016-11-17T19:19:18">SecondOrderLag</Name>
 			<BitSize>352</BitSize>
 			<SubItem>
 				<Name>y_k_1</Name>
